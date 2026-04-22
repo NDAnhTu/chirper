@@ -45,7 +45,7 @@ class ChirpSeeder extends Seeder
         foreach ($chirps as $message) {
             $users->random()->chirps()->create([
                 'message' => $message,
-                'created_at' => now()->subMinutes(rand(5, 1440)),
+                'created_at' => now(),
             ]);
         }
     }
